@@ -125,21 +125,62 @@
         }
 
         .service {
-            padding: 35px;
-            border: 1px solid #eeeeee;
-            border-radius: 10px;
-            background: #ffffff;
-            transition: transform 0.3s ease;
-        }
+
+    padding: 35px;
+
+    border: 1px solid #E6E6E6;
+
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    transition: all 0.3s ease;
+
+    position: relative;
+
+}
+
+.service::before {
+
+    content: "";
+
+    display: block;
+
+    width: 35px;
+
+    height: 3px;
+
+    background: #BD996A;
+
+    margin-bottom: 25px;
+
+}
+
+.service:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #BD996A;
+
+    box-shadow: 0 12px 30px rgba(3, 18, 47, 0.08);
+
+}
 
         .service:hover {
             transform: translateY(-5px);
         }
 
         .service h3 {
-            font-size: 21px;
-            margin-bottom: 15px;
-        }
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+
+    color: #03122F;
+
+    letter-spacing: -0.3px;
+
+}
 
         .service p {
             color: #6b7280;
