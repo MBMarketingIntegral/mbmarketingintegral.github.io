@@ -2,13 +2,14 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MB Marketing Integral | Marketing digital con visión de negocio.</title>
+    <title>MB Marketing Integral | Estrategia, datos y crecimiento</title>
 
     <meta name="description"
-        content="MB Marketing Integral. Estrategia, datos y experiencia real para convertir oportunidades en crecimiento.">
+        content="Ayudo a negocios a detectar oportunidades, tomar mejores decisiones y crecer con estrategia y datos. Marketing digital, e-commerce y consultoría estratégica.">
 
     <style>
 
@@ -25,6 +26,12 @@
             line-height: 1.6;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* HEADER */
+
         header {
             display: flex;
             justify-content: space-between;
@@ -32,13 +39,14 @@
             padding: 24px 8%;
             border-bottom: 1px solid #eeeeee;
             background: #ffffff;
+            position: relative;
+            z-index: 10;
         }
 
-       .logo img {
-    width: 145px;
-    height: auto;
-    display: block;
-}
+        .logo img {
+            width: 145px;
+            height: auto;
+            display: block;
         }
 
         nav a {
@@ -46,11 +54,14 @@
             text-decoration: none;
             color: #000000;
             font-size: 15px;
+            transition: color 0.2s ease;
         }
 
         nav a:hover {
             color: #BD996A;
         }
+
+        /* HERO */
 
         .hero {
             min-height: 78vh;
@@ -61,7 +72,7 @@
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
         }
 
         .eyebrow {
@@ -77,14 +88,23 @@
             line-height: 1.08;
             letter-spacing: -2px;
             margin: 22px 0;
+            max-width: 850px;
         }
 
         .hero p {
             font-size: 21px;
             color: #626b7c;
-            max-width: 700px;
+            max-width: 720px;
             margin-bottom: 35px;
         }
+
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* BUTTONS */
 
         .btn {
             display: inline-block;
@@ -94,11 +114,28 @@
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
 
         .btn:hover {
             background: #9A774A;
+            transform: translateY(-2px);
         }
+
+        .btn-secondary {
+            background: transparent;
+            color: #03122F;
+            border: 1px solid #03122F;
+        }
+
+        .btn-secondary:hover {
+            background: #03122F;
+            color: #ffffff;
+        }
+
+        /* SECTIONS */
 
         section {
             padding: 100px 8%;
@@ -112,11 +149,14 @@
         .section-title h2 {
             font-size: 38px;
             margin-bottom: 15px;
+            letter-spacing: -1px;
         }
 
         .section-title p {
             color: #6b7280;
         }
+
+        /* SERVICES */
 
         .services {
             display: grid;
@@ -125,66 +165,40 @@
         }
 
         .service {
+            padding: 35px;
+            border: 1px solid #E6E6E6;
+            border-radius: 4px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
 
-    padding: 35px;
-
-    border: 1px solid #E6E6E6;
-
-    border-radius: 4px;
-
-    background: #ffffff;
-
-    transition: all 0.3s ease;
-
-    position: relative;
-
-}
-
-.service::before {
-
-    content: "";
-
-    display: block;
-
-    width: 35px;
-
-    height: 3px;
-
-    background: #BD996A;
-
-    margin-bottom: 25px;
-
-}
-
-.service:hover {
-
-    transform: translateY(-6px);
-
-    border-color: #BD996A;
-
-    box-shadow: 0 12px 30px rgba(3, 18, 47, 0.08);
-
-}
+        .service::before {
+            content: "";
+            display: block;
+            width: 35px;
+            height: 3px;
+            background: #BD996A;
+            margin-bottom: 25px;
+        }
 
         .service:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+            border-color: #BD996A;
+            box-shadow: 0 12px 30px rgba(3, 18, 47, 0.08);
         }
 
         .service h3 {
-
-    font-size: 21px;
-
-    margin-bottom: 15px;
-
-    color: #03122F;
-
-    letter-spacing: -0.3px;
-
-}
+            font-size: 21px;
+            margin-bottom: 15px;
+            color: #03122F;
+            letter-spacing: -0.3px;
+        }
 
         .service p {
             color: #6b7280;
         }
+
+        /* ABOUT */
 
         .about {
             background: #f7f8ff;
@@ -201,9 +215,150 @@
             color: #626b7c;
         }
 
-        .contact {
+        /* RESULTS */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 35px 20px;
+            border-top: 2px solid #BD996A;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 52px;
+            font-weight: 700;
+            color: #BD996A;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+        }
+
+        .stat span {
+            display: block;
+            font-size: 14px;
+            color: #03122F;
+            line-height: 1.5;
+        }
+
+        .results-description {
+            max-width: 700px;
+            margin: 55px auto 0;
             text-align: center;
         }
+
+        .results-description p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555555;
+        }
+
+        /* CONTACT */
+
+        .contact-section {
+            background: #f7f8ff;
+        }
+
+        .contact-content {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .contact-copy {
+            padding-top: 15px;
+        }
+
+        .contact-copy h2 {
+            font-size: 42px;
+            line-height: 1.1;
+            margin: 20px 0;
+            letter-spacing: -1px;
+        }
+
+        .contact-copy p {
+            font-size: 18px;
+            color: #626b7c;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            background: #ffffff;
+            padding: 40px;
+            border: 1px solid #E6E6E6;
+            box-shadow: 0 15px 40px rgba(3, 18, 47, 0.06);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #03122F;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid #DCDCDC;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 15px;
+            color: #03122F;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #BD996A;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .contact-form .btn {
+            width: 100%;
+            font-size: 15px;
+        }
+
+        /* FLOATING CTA */
+
+        .floating-cta {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            background: #03122F;
+            color: #ffffff;
+            padding: 14px 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease;
+        }
+
+        .floating-cta:hover {
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
 
         footer {
             padding: 30px 8%;
@@ -212,7 +367,30 @@
             text-align: center;
         }
 
-        @media (max-width: 800px) {
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
 
             header {
                 flex-direction: column;
@@ -223,131 +401,165 @@
                 margin: 0 8px;
             }
 
+            .hero {
+                padding: 70px 8%;
+            }
+
             .hero h1 {
-                font-size: 42px;
+                font-size: 40px;
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .hero-actions .btn {
+                text-align: center;
+                width: 100%;
+            }
+
+            section {
+                padding: 75px 8%;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
             }
 
             .services {
                 grid-template-columns: 1fr;
             }
 
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .stat strong {
+                font-size: 40px;
+            }
+
+            .contact-copy h2 {
+                font-size: 36px;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+
+            .floating-cta {
+                bottom: 15px;
+                right: 15px;
+                left: 15px;
+                text-align: center;
+            }
+
         }
-.stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-top: 50px;
-}
 
-.stat {
-    text-align: center;
-    padding: 35px 20px;
-    border-top: 2px solid #BD996A;
-}
-
-.stat strong {
-    display: block;
-    font-size: 52px;
-    font-weight: 700;
-    color: #BD996A;
-    letter-spacing: -2px;
-    margin-bottom: 10px;
-}
-
-.stat span {
-    display: block;
-    font-size: 14px;
-    color: #03122F;
-    line-height: 1.5;
-}
-
-.results-description {
-    max-width: 700px;
-    margin: 55px auto 0;
-    text-align: center;
-}
-
-.results-description p {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #555555;
-}
-        @media (max-width: 768px) {
-
-    .stats {
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 20px;
-
-    }
-
-    .stat strong {
-
-        font-size: 40px;
-
-    }
-
-}
     </style>
+
 </head>
 
+
 <body>
+
 
     <header>
 
         <div class="logo">
 
-    <img src="logo.png" alt="MB Marketing Integral">
+            <img src="logo.png" alt="MB Marketing Integral">
 
-</div>
+        </div>
+
 
         <nav>
+
             <a href="#servicios">Servicios</a>
+
             <a href="#nosotros">Nosotros</a>
+
             <a href="#contacto">Contacto</a>
+
         </nav>
 
     </header>
 
 
-<main>
+    <main>
 
-    <section class="hero">
 
-        <div class="hero-content">
+        <!-- HERO -->
 
-            <div class="eyebrow">
-                MARKETING DIGITAL · E-COMMERCE · ESTRATEGIA
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+
+                    MARKETING DIGITAL · E-COMMERCE · ESTRATEGIA
+
+                </div>
+
+
+                <h1>
+
+                    Ayudo a negocios a detectar oportunidades, tomar mejores decisiones y crecer con estrategia y datos.
+
+                </h1>
+
+
+                <p>
+
+                    Más de 10 años de experiencia en marketing digital, e-commerce y estrategia para transformar datos y oportunidades en acciones que generan crecimiento.
+
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <a href="#contacto" class="btn">
+
+                        Quiero mejorar mi negocio
+
+                    </a>
+
+
+                    <a href="#servicios" class="btn btn-secondary">
+
+                        Ver cómo puedo ayudarte
+
+                    </a>
+
+                </div>
+
             </div>
 
-            <h1>
-                Estrategia, datos y experiencia real para convertir oportunidades en crecimiento.
-            </h1>
+        </section>
 
-            <p class="hero-text">
-                Ayudo a negocios y marcas a tomar mejores decisiones, optimizar sus resultados y crecer con estrategias digitales basadas en datos y experiencia real.
-            </p>
 
-            <a href="#contacto" class="btn">
-                Hablemos de tu negocio
-            </a>
-
-        </div>
-
-    </section>
-
+        <!-- SERVICIOS -->
 
         <section id="servicios">
 
             <div class="section-title">
 
                 <h2>
+
                     Soluciones para hacer crecer tu negocio
+
                 </h2>
 
+
                 <p>
+
                     Estrategia, análisis y acción orientados a resultados.
+
                 </p>
 
             </div>
@@ -355,15 +567,20 @@
 
             <div class="services">
 
+
                 <div class="service">
 
                     <h3>
+
                         Consultoría Estratégica
+
                     </h3>
 
+
                     <p>
-                        Analizamos tu negocio y detectamos oportunidades
-                        para ayudarte a tomar mejores decisiones.
+
+                        Analizamos tu negocio y detectamos oportunidades para ayudarte a tomar mejores decisiones.
+
                     </p>
 
                 </div>
@@ -372,12 +589,16 @@
                 <div class="service">
 
                     <h3>
+
                         SEO & GEO
+
                     </h3>
 
+
                     <p>
-                        Mejoramos tu visibilidad digital y trabajamos
-                        estrategias de posicionamiento adaptadas al entorno actual.
+
+                        Mejoramos tu visibilidad digital y trabajamos estrategias de posicionamiento adaptadas al entorno actual.
+
                     </p>
 
                 </div>
@@ -386,12 +607,16 @@
                 <div class="service">
 
                     <h3>
+
                         E-commerce Growth
+
                     </h3>
 
+
                     <p>
-                        Identificamos oportunidades de mejora para optimizar
-                        tiendas online y potenciar su crecimiento.
+
+                        Identificamos oportunidades de mejora para optimizar tiendas online y potenciar su crecimiento.
+
                     </p>
 
                 </div>
@@ -400,12 +625,16 @@
                 <div class="service">
 
                     <h3>
+
                         Analítica Avanzada
+
                     </h3>
 
+
                     <p>
-                        Convertimos los datos de tu negocio en información
-                        útil para tomar decisiones con mayor confianza.
+
+                        Convertimos los datos de tu negocio en información útil para tomar decisiones con mayor confianza.
+
                     </p>
 
                 </div>
@@ -414,12 +643,16 @@
                 <div class="service">
 
                     <h3>
+
                         Marketing Digital
+
                     </h3>
 
+
                     <p>
-                        Diseñamos estrategias digitales alineadas con tus
-                        objetivos y tu público.
+
+                        Diseñamos estrategias digitales alineadas con tus objetivos y tu público.
+
                     </p>
 
                 </div>
@@ -428,169 +661,333 @@
                 <div class="service">
 
                     <h3>
+
                         Optimización de Negocio
+
                     </h3>
 
+
                     <p>
-                        Detectamos procesos y oportunidades que pueden
-                        ayudarte a crecer de forma más eficiente.
+
+                        Detectamos procesos y oportunidades que pueden ayudarte a crecer de forma más eficiente.
+
                     </p>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
+        <!-- SOBRE NOSOTROS -->
+
         <section class="about" id="nosotros">
 
-    <div class="about-content">
+            <div class="about-content">
 
-        <div class="section-title">
+                <div class="section-title">
 
-            <h2>
+                    <h2>
 
-                Experiencia que se convierte en resultados
+                        Experiencia que se convierte en resultados
 
-            </h2>
-
-            <p>
-
-                Más de una década trabajando en marketing digital,
-
-                e-commerce y estrategia online para negocios reales.
-
-            </p>
-
-        </div>
-
-        <p>
-
-            No hablamos de teoría. Analizamos negocios, datos y oportunidades
-
-            para diseñar estrategias que ayuden a crecer de forma sostenible.
-
-        </p>
-
-    </div>
-
-</section>
-
-<section class="results">
-
-    <div class="section-title">
-
-        <h2>
-            Resultados que hablan por sí solos
-        </h2>
-
-        <p>
-            Experiencia real aplicada a negocios, equipos y objetivos concretos.
-        </p>
-
-    </div>
+                    </h2>
 
 
-    <div class="stats">
+                    <p>
 
-        <div class="stat">
+                        Más de una década trabajando en marketing digital, e-commerce y estrategia online para negocios reales.
 
-            <strong>
-                +10
-            </strong>
+                    </p>
 
-            <span>
-                años de experiencia
-            </span>
+                </div>
 
-        </div>
-
-
-        <div class="stat">
-
-            <strong>
-                +20
-            </strong>
-
-            <span>
-                propiedades captadas en 6 meses
-            </span>
-
-        </div>
-
-
-        <div class="stat">
-
-            <strong>
-                +3.000
-            </strong>
-
-            <span>
-                seguidores en menos de un año
-            </span>
-
-        </div>
-
-
-        <div class="stat">
-
-            <strong>
-                4
-            </strong>
-
-            <span>
-                sectores y modelos de negocio
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="results-description">
-
-        <p>
-            Desde la captación de clientes y el crecimiento digital hasta
-            la gestión de e-commerce, equipos y estrategias B2B.
-            Cada proyecto parte de una misma premisa: entender el negocio
-            para tomar mejores decisiones.
-        </p>
-
-    </div>
-
-</section>
-
-        <section class="contact" id="contacto">
-
-            <div class="section-title">
-
-                <h2>
-                    ¿Hablamos?
-                </h2>
 
                 <p>
-                    Cuéntanos qué quieres mejorar en tu negocio.
+
+                    No hablamos de teoría. Analizamos negocios, datos y oportunidades para diseñar estrategias que ayuden a crecer de forma sostenible.
+
                 </p>
 
             </div>
 
-            <a href="mailto:mbmarketingintegral@gmail.com" class="btn">
-                Contactar
-            </a>
+        </section>
+
+
+        <!-- RESULTADOS -->
+
+        <section class="results">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Resultados que hablan por sí solos
+
+                </h2>
+
+
+                <p>
+
+                    Experiencia real aplicada a negocios, equipos y objetivos concretos.
+
+                </p>
+
+            </div>
+
+
+            <div class="stats">
+
+
+                <div class="stat">
+
+                    <strong>
+
+                        +10
+
+                    </strong>
+
+
+                    <span>
+
+                        años de experiencia
+
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>
+
+                        +20
+
+                    </strong>
+
+
+                    <span>
+
+                        propiedades captadas en 6 meses
+
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>
+
+                        +3.000
+
+                    </strong>
+
+
+                    <span>
+
+                        seguidores en menos de un año
+
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>
+
+                        4
+
+                    </strong>
+
+
+                    <span>
+
+                        sectores y modelos de negocio
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="results-description">
+
+                <p>
+
+                    Desde la captación de clientes y el crecimiento digital hasta la gestión de e-commerce, equipos y estrategias B2B. Cada proyecto parte de una misma premisa: entender el negocio para tomar mejores decisiones.
+
+                </p>
+
+            </div>
 
         </section>
 
+
+        <!-- CONTACTO -->
+
+        <section class="contact-section" id="contacto">
+
+            <div class="contact-content">
+
+
+                <div class="contact-copy">
+
+                    <div class="eyebrow">
+
+                        HABLEMOS DE TU NEGOCIO
+
+                    </div>
+
+
+                    <h2>
+
+                        ¿Tienes un reto de crecimiento?
+
+                    </h2>
+
+
+                    <p>
+
+                        Cuéntame qué quieres mejorar en tu negocio y vemos juntos dónde están las oportunidades.
+
+                    </p>
+
+
+                    <p>
+
+                        Sin discursos comerciales. Primero entendemos tu situación.
+
+                    </p>
+
+                </div>
+
+
+                <form 
+                    action="https://formspree.io/f/xdaqepqk"
+                    method="POST"
+                    class="contact-form"
+                >
+
+                    <div class="form-group">
+
+                        <label for="nombre">
+
+                            Nombre
+
+                        </label>
+
+
+                        <input 
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Tu nombre"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+
+                            Email
+
+                        </label>
+
+
+                        <input 
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="tu@email.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="empresa">
+
+                            Empresa
+
+                        </label>
+
+
+                        <input 
+                            type="text"
+                            id="empresa"
+                            name="empresa"
+                            placeholder="Nombre de tu empresa"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="mensaje">
+
+                            ¿En qué puedo ayudarte?
+
+                        </label>
+
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="5"
+                            placeholder="Cuéntame brevemente tu situación o reto..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="btn">
+
+                        Quiero hablar de mi negocio
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
     </main>
+
+
+    <!-- CTA FLOTANTE -->
+
+    <a href="#contacto" class="floating-cta">
+
+        Hablemos de tu negocio
+
+    </a>
 
 
     <footer>
 
         <p>
+
             © 2026 MB Marketing Integral. Todos los derechos reservados.
+
         </p>
 
     </footer>
+
 
 </body>
 
