@@ -232,7 +232,63 @@
             }
 
         }
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
 
+.stat {
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 2px solid #BD996A;
+}
+
+.stat strong {
+    display: block;
+    font-size: 52px;
+    font-weight: 700;
+    color: #BD996A;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+
+.stat span {
+    display: block;
+    font-size: 14px;
+    color: #03122F;
+    line-height: 1.5;
+}
+
+.results-description {
+    max-width: 700px;
+    margin: 55px auto 0;
+    text-align: center;
+}
+
+.results-description p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555555;
+}
+        @media (max-width: 768px) {
+
+    .stats {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+
+    }
+
+    .stat strong {
+
+        font-size: 40px;
+
+    }
+
+}
     </style>
 </head>
 
