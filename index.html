@@ -205,15 +205,38 @@
         }
 
         .about-content {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-        }
+    max-width: 1100px;
+    margin: auto;
+}
 
-        .about-content p {
-            font-size: 20px;
-            color: #626b7c;
-        }
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 380px;
+    display: block;
+    margin: auto;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-text .section-title {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    font-size: 19px;
+    color: #626b7c;
+    margin-bottom: 20px;
+}
 
         /* RESULTS */
 
@@ -387,6 +410,21 @@
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
+             .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+    .about-text,
+
+    .about-text .section-title {
+
+        text-align: center;
+
+    }
 
         }
 
@@ -687,36 +725,62 @@
 
     <div class="about-content">
 
-        <div class="section-title">
-
-            <h2>
-
-                Experiencia que se convierte en resultados
-
-            </h2>
+        <div class="about-grid">
 
 
-            <p>
+            <div class="about-image">
 
-                Más de una década trabajando en marketing digital, e-commerce y estrategia online para negocios reales.
+                <img 
+                    src="tu-foto.jpg" 
+                    alt="MB Marketing Integral"
+                >
 
-            </p>
+            </div>
+
+
+            <div class="about-text">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Experiencia que se convierte en resultados
+
+                    </h2>
+
+
+                    <p>
+
+                        Más de una década trabajando en marketing digital, e-commerce y estrategia online para negocios reales.
+
+                    </p>
+
+                </div>
+
+
+                <p>
+
+                    No aplico fórmulas. Diseño estrategias de marketing adaptadas a cada negocio.
+
+                </p>
+
+
+                <p>
+
+                    Analizo las necesidades, detecto oportunidades y propongo las acciones que realmente tienen sentido para cada proyecto.
+
+                </p>
+
+
+                <p>
+
+                    Entender. Analizar. Proponer. Ejecutar.
+
+                </p>
+
+            </div>
 
         </div>
-
-
-        <p>
-
-            No aplico fórmulas. Diseño estrategias de marketing adaptadas a cada negocio.
-
-        </p>
-
-
-        <p>
-
-            Analizo las necesidades, detecto oportunidades y propongo las acciones que realmente tienen sentido para cada proyecto.
-
-        </p>
 
     </div>
 
